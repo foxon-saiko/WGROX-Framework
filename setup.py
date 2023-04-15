@@ -1,6 +1,7 @@
+"""
 MIT License
 
-Copyright (c) 2020 Foxon-saiko
+Copyright (c) 2020-2023 Foxon-Saiko
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +20,30 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+"""
+
+from setuptools import setup, find_packages
+
+setup(name='WGROX',
+      version='7.0.0',
+      description=(
+          'WGROX Framework is an Android post-exploitation framework that exploits the'
+          ' Android Debug Bridge to remotely access an Android device.'
+      ),
+      url='https://github.com/foxon-saiko',
+      author='DemiyanDissanayake/foxon-saiko',
+      author_email='anonimus.lk.gov.com@gmail.com',
+      license='MIT',
+      python_requires='>=3.7.0',
+      packages=find_packages(),
+      include_package_data=True,
+      entry_points={
+          "console_scripts": [
+              "WGROX = WGROX:cli"
+          ]
+      },
+      install_requires=[
+          'adb-shell'
+      ],
+      zip_safe=False
+      )
